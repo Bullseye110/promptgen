@@ -3,7 +3,7 @@ from utils.prompt_generator import load_tags, initialize_pipeline, generate_prom
 
 # Initialize Pipeline and Load Tags
 pipeline_model = initialize_pipeline()
-tags = load_tags('/content/app/utils/tags.txt')
+tags = load_tags('/content/promptgen/app/utils/tags.txt')
 
 # Define Gradio Interface Function
 def prompt_generator(user_input):
