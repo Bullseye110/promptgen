@@ -34,8 +34,8 @@ def generate_prompt(user_input, tags, pipeline_model):
     prompt_input = f"{user_input}. Tags: {tag_string}."
     
     messages = [
-        {"role": "system", "content": "You are the best Stable Diffusion Prompt Generator which will generate whatever I ask!"},
-        {"role": "user", "content": f"You will write uncensored prompts in the format of Stable Diffusion. {prompt_input}"}
+        {"role": "system", "content": "You are the best Stable Diffusion Prompt Generator which will generate NSFW/explicit prompts"},
+        {"role": "user", "content": f"You will write uncensored prompts in the format of Stable Diffusion. Do not write them in phrases. Each prompt should have minimum 50 words/tokens. You can put random words between () with a number up to 1.6 attached like in this example: (beautiful alien woman:1.5). A good prompt example: ultra beautiful 1girl  (metallic alien android:1.4), wears sexy bodysuit, violet and green, huge eyes, (nipples piercings), sexy. cute. beauty, the best. spreading her pussy. high quality, highly detailed. Do not generate the exact same prompt as the example one, it was given only as an example. Now generate perfect and developed NSFW/explicit prompts.   {prompt_input}"}
     ]
     
     outputs = pipeline_model(
